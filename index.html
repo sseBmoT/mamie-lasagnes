@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mamie Lasagnes | Lasagnes faites maison</title>
+    <meta name="description" content="Lasagnes faites maison | Mamie Lasagnes">
+    <meta name="keywords" content="mamie, lasagnes, faites, maison, nourriture, restauration">
+    <meta name="author" content="Paul Vidal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon_32x32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="assets/img/favicon/favicon_64x64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="assets/img/favicon/favicon_96x96.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="assets/img/favicon/favicon_196x196.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/favicon_152x152.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/favicon_114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/favicon_144x144.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/favicon_144x144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-menu.css">
+    <link rel="stylesheet" href="animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700&display=swap" rel="stylesheet"> 
+<!-- Facebook Pixel Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js%27');
+    fbq('init', '816284388817691'); 
+    fbq('track', 'PageView');
+    function unlockForm() {
+        $('#form-button').prop("disabled", false);
+    }
+    function recaptchaExpired(){
+        $('#form-button').prop("disabled", true);
+    }
+</script>
+<noscript>
+     <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=816284388817691&ev=PageView
+        &noscript=1"/>
+</noscript>
+    <!-- End Facebook Pixel Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>select::-webkit-scrollbar{ width:1px; background-color:transparent }</style>
+    <script>
+        $(document).ready(function(){
+            $('#form-button').prop("disabled", true);
+            checkCookie()
+        });
+    </script>
+</head>
+
+<body>
+    <div class="chargement slideOutUp">
+    <img src="assets/img/logo.svg" alt="Mamie Lasagnes" title="Mamie Lasagnes">    
+    </div>
+
+
+    <!-- Navigation -->
+    <div id="navbar" class="w-100 d-none d-md-block">
+        <nav class="navbar navbar-expand navbar-light fixed-top">
+            <div class="navbar-nav w-100">
+                <ul id="navbar-items-list" class="nav d-flex justify-content-around align-items-center w-100">
+                    <li class="nav-item d-none d-md-block">
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link text-uppercase smooth-scrolling" href="#a-la-carte">La carte</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link text-uppercase smooth-scrolling" href="#a-ldm">Les lasagnes du moment</a>
+                    </li>
+                    <li>
+                        <a href="#a-image-intro" class="smooth-scrolling">
+                            <img src="assets/img/logo_150x150.png" class="intro-img" alt="Mamie Lasagnes" width="90" height="90" title="Mamie Lasagnes" style="transition: 0.3s">
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link text-uppercase smooth-scrolling" href="#a-evenement">Commandez</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link text-uppercase smooth-scrolling" href="#a-footer">Contact</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <div id="social-nav" class="mr-4">
+                            <a href="tel:+33646309313"><div class="custom-icon icon-phone"></div></a>
+                            <a href="https://www.facebook.com/mamielasagnes/" target="_blank"><div class="custom-icon icon-fb"></div></a>
+                            <a href="https://www.instagram.com/mamie_lasagnes/" target="_blank"><div class="custom-icon icon-instagram"></div></a>
+                            <a href="https://www.tripadvisor.fr" target="_blank"><div class="custom-icon icon-tripadvisor"></div></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wave-effect w-100" style="margin-top: 103px;"></div>
+        </nav>
+    </div>
+    <!-- Navigation End -->
+    <!-- Mobile Header -->
+    <div id="mobile-header" class="d-block d-md-none">
+        <nav class="navbar navbar-expand navbar-light">
+            <div class="navbar-nav w-100 py-1">
+                <ul id="navbar-items-list" class="nav d-flex justify-content-center align-items-center w-100">
+                    <li>
+                        <img src="assets/img/logo_150x150.png" alt="Mamie Lasagne" width="90"
+                            height="90" title="Mamie Lasagne">
+                    </li>
+                </ul>
+            </div>
+            <div id="top-wave-effect" class="wave-effect w-100"></div>
+        </nav>
+    </div> 
+    <!-- Mobile Header End -->
+    <!-- Carousel -->
+    <span class="anchor" id="a-image-intro"></span>
+    <div id="image-intro">
+        <div class="img-container d-flex align-items-center">
+            <div class="text-container d-flex align-items-center">
+                <div class="intro-text">
+                    <h3 class="text-uppercase mb-2 light">Lasagnes faites maison,<br>cuisinées avec des produits frais et locaux.</h3>
+                    <h3 class="text-uppercase light">Livraison dès la sortie du four<br>à votre domicile.</h3>
+                    <div class="underline d-block d-md-none"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-effect w-100" style="transform: rotateX(180deg); margin-top: -65px;"></div>
+    </div>
+    <!-- Carousel End-->
+    <!-- La Carte -->
+    <span class="anchor" id="a-la-carte"></span>
+    <div id="la-carte" class="p-2">
+        <div class="flex-text-container section-title">
+            <h2 class="text-uppercase d-inline-block regular">La carte</h2>
+            <span class="custom-chips-secondary special align-items-center ml-2 btn-phone d-none d-md-block"><a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a></span>
+            <div class="--separator-sm --secondary-separator"></div>
+        </div>
+        <h3 class="text-center text-uppercase light">Les lasagnes de Mamie</h3>
+        <div class="d-flex justify-content-center flex-wrap" id="products">
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/bolognaise.jpg" alt="Lasagne Bolognaise" title="Lasagne bolognaise">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Bolognaise</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Sauce tomate, Pâte fraîche, Viande hachée de bœuf <span class="text-indication" >(Charolaise origine France)</span>, Emmental.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> |
+                            800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/lasagne_vegetarienne.jpg" alt="Lasagne Végétarienne" title="Lasagne Végétarienne">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Végétarienne</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Sauce tomate, Pâte fraîche, Ratatouille maison, Courgettes, Aubergines, Oignons, Tomates, Emmental.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> |
+                            800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/tomate_mozzarella_pesto.jpg" alt="Lasagne Mozza Pesto" title="Lasagne Mozza Pesto">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Mozza Pesto</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Sauce tomate, Pâte fraîche, Tranches de tomates fraîches, Pesto, Mozzarella, Emmental.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> |
+                            800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/blanche_4_fromages.jpg" alt="Lasagne 4 Fromages" title="Lasagne 4 Fromages">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">4 Fromages</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Base crème, Pâte fraîche, Mozzarella, Chèvre, Gorgonzola, Emmental</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> |
+                            800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/blanche_saumon_epinard.jpg" alt="Lasagne Saumon Épinard" title="Lasagne Saumon Épinard">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Saumon Épinards</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Base crème, Pâte fraîche, Épinards frais cuisinés, Saumon, Emmental.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> |
+                            800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/Lasagne_poulet_pesto_chevre.jpg" alt="Lasagne Poulet Pesto Chèvre" title="Lasagne Poulet Pesto Chèvre">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Poulet Pesto</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Sauce tomate, Pâte fraîche, Poulet mariné, Pesto, Chèvre, Emmental.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> | 800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-center text-uppercase light space-txt-dessert">Les desserts de Mamie</h3>
+        <div class="d-flex justify-content-center flex-wrap" id="products">
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/tiramisu.jpg" alt="Tiramisu" title="Tiramisu">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Tiramisu</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Mascarpone, Oeufs, Biscuits, Café, Amaretto, Poudre de cacao.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            125<span class="text-gr mr-2 ml-1">gr</span>  3,5 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/mousse.jpg" alt="Mousse au chocolat" title="Mousse au chocolat">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Mousse au chocolat</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light">Chocolat pâtissier, Pincée de sel fin, Oeufs bio.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            125<span class="text-gr mr-1 ml-1">gr</span>  3,5 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-container">
+                    <img class="t-card-img" src="assets/img/products/pannacotta.jpg" alt="Panna Cotta" title="Panna Cotta">
+                    <h5 class="text-uppercase t-card-title mt-3 mx-3 text-center regular">Panna Cotta</h5>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <div class="text-center px-2 mb-3 light"> Lait, Sucre vanillé, Crème fraîche liquide, Coulis de framboise, Vanille.</div>
+                    <div class="t-card-footer">
+                        <span class="d-flex align-items-center justify-content-center">
+                            125<span class="text-gr mr-1 ml-1">gr</span>  3,5 <div class="custom-icon icon-euro"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mt-4">
+                <div class="border-green t-card p-2 mt-4 h-100">
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Boissons</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <div class="h-100 d-flex align-items-center">
+                            <ul class="t-card-products-list light">
+                                Coca-Cola, Coca-Cola Zéro, Oasis Tropical, Schweppes Agrumes, Lipton Ice Tea, Orangina, Eau.
+                            </ul>
+                        </div>
+                        <div class="barre-green"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4">
+                <div class="border-green t-card p-2 mt-4 h-100">
+                    <div class="t-container">
+                        <h4 class="text-uppercase t-card-title regular">Vins</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="light text-center">Sélection d’un domaine de producteur local chaque mois.</p>
+                        <ul class="t-card-products-list light">
+                            <li>Vin Blanc</li>
+                            <li>Vin Rouge</li>
+                        </ul>
+                    </div>
+                    <div class="barre-green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;margin-top:59px;">
+        <img src="assets/img/mastercard.svg" width="50px" height="auto" alt="MasterCard">
+        <img style="margin-left: 1.5%;margin-right: 1.5%;" src="assets/img/visa.svg" width="50px" height="auto" alt="Visa">
+        <img src="assets/img/american.svg" width="50px" height="auto" alt="American Express">
+        <img style="margin-left: 1.5%;margin-right: 1.5%;" src="assets/img/maestro.svg" width="50px" height="auto" alt="Maestro">
+        <img src="assets/img/ticketrestaurant.svg" width="50px" height="auto" alt="Ticket Restaurant">
+        <img style="margin-left: 1.5%;" src="assets/img/cheque.png" width="50px" height="auto" alt="Chèque Déjeuner">
+    </div>
+    <!-- La Carte End -->
+    <!-- Les formules -->
+    <span class="anchor" id="a-formules"></span>
+    <div id="formules" class="mt-5">
+        <div class="flex-text-container section-title">
+            <h2 class="text-uppercase text-white medium">Les formules</h2>
+            <div class="--separator-sm --secondary-separator"></div>
+        </div>
+        <div class="row text-center" style="width: 100%; margin-right: 0px; margin-left: 0px;">
+            <div class="col-md-4 text-center text-white ">
+                <h5 class="text-uppercase mb-3 regular">Formule plaisir</h5>
+                <ul class="light">
+                    <li>Lasagne simple</li>
+                    <li class="no-list-style">+</li>
+                    <li>Salade</li>
+                    <li class="no-list-style">+</li>
+                    <li>Dessert</li>
+                    <li class="no-list-style">+</li>
+                    <li>Boisson</li>
+                </ul>
+                <div>
+                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center mt-2">14 <div class="custom-icon icon-euro"></div></span>
+                </div>
+                <div class="d-block d-md-none">
+                    <div class="--separator-sm --secondary-separator mt-4 mb-2"></div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center text-white">
+                <h5 class="text-uppercase mb-3 regular">Formule gourmande</h5>
+                <ul class="light">
+                    <li>Lasagne double</li>
+                    <li class="no-list-style">+</li>
+                    <li>Salade</li>
+                    <li class="no-list-style">+</li>
+                    <li>Dessert</li>
+                    <li class="no-list-style">+</li>
+                    <li>Boisson</li>
+                </ul>
+                <div>
+                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center mt-2">19 <div class="custom-icon icon-euro"></div> </span>
+                </div>
+                <div class="d-block d-md-none">
+                    <div class="--separator-sm --secondary-separator mt-4 mb-2"></div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center text-white mb-5">
+                <h5 class="text-uppercase mb-3 regular">À la carte</h5>
+                <ul class="light" id="custom-ul">
+                    <li>Salade<span class="custom-chips-secondary little d-flex align-items-center justify-content-center">1,5 <div class="custom-icon icon-euro"></div> </span></li>
+                    <li>Dessert <span class="custom-chips-secondary little d-flex align-items-center justify-content-center">3,5 <div class="custom-icon icon-euro"></div> </span></li>
+                    <li>Boisson <span class="custom-chips-secondary little d-flex align-items-center justify-content-center">1,5 <div class="custom-icon icon-euro"></div> </span></li>
+                    <li>Bouteille de vin <span class="custom-chips-secondary little d-flex align-items-center justify-content-center">15 <div class="custom-icon icon-euro"></div> </span></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <!-- Delivery -->
+    <span class="anchor" id="a-delivery"></span>
+    <div id="delivery-container" class="row mt-5 mb-5" style="width: 100%;  margin-right: 0px; margin-left: 0px;">
+        <div id="delivery" class="col-lg-6 flex-text-container ">
+            <h1 class="text-uppercase mb-3 medium">Zone de livraison</h1>
+            <h4 class="text-uppercase mb-3 mt-3 light">Saint-Gély-Du-Fesc, Grabels, Saint-Clément-de-Rivière, Montferrier, Combaillaux, Murles, Les Matelles, Grabels, Prades-le-Lez, Montpellier Nord</h4>
+            <h5 class="text-uppercase --primary mb-3 mt-3 medium">Livraison le vendredi, le samedi et dimanche de 18h
+                à 22h</h5>
+            <h5 class="text-uppercase --primary mt-3 mb-3 light">Frais de livraison offert</h5>
+            <span class="custom-chips-primary mt-2 d-flex align-items-center"><a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a></span>
+        </div>
+        <div id="map" class="col-lg-6 flex-text-container mt-lg-0 mt-3">
+            <div id="iframe-container">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1y2In_DzJvQrIHJLoegfHAt-OkB-no-8q&z=11" width="640" height="480"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Delivery End-->
+    <!-- Lasagne Du Moment -->
+    <span id="a-ldm" class="anchor"></span>
+    <div id="ldm" class="text-white">
+        <div class="flex-text-container section-title py-2 py-md-0">
+            <h2 class="text-uppercase medium">Les lasagnes du moment</h2>
+            <div class="--separator-lg --secondary-separator"></div>
+        </div>
+        <div id="ldm-slider" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#ldm-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#ldm-slider" data-slide-to="1"></li>
+                <li data-target="#ldm-slider" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="pr-md-5">
+                                <h4 class="text-uppercase ml-2 regular">Lasagne bolognaise</h4>
+                                <div class="--separator-sm --secondary-separator pl-1 ml-2" style="text-align: left;"></div>
+                                <div class="d-flex mb-1 ml-1"><div class="custom-icon icon-cart-yellow"></div><h5 class="text-uppercase mb-0 ml-1 light">Ingrédients :</h5></div>
+                                <ul class="light">
+                                    <li>Sauce tomate</li>
+                                    <li>Viande hachée de bœuf (Charolaise origine France)</li>
+                                    <li>Emmental</li>
+                                </ul>
+                                <div class="mx-1 my-3 d-flex justify-content-center flex-wrap">
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center mb-2">500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center ml-2">800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary special d-flex align-items-center ml-2"><a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a></span>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="img-round" src="assets/img/products/round_bolognaise.jpg" alt="Lasagne bolognaise"  title="Lasagne bolognaise">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="pr-md-5 fix-width">
+                                <h4 class="text-uppercase ml-2 regular">Lasagne Végétarienne</h4>
+                                <div class="--separator-sm --secondary-separator pl-1 ml-2" style="text-align: left;"></div>
+                                <div class="d-flex mb-1 ml-1"><div class="custom-icon icon-cart-yellow"></div><h5 class="text-uppercase mb-0 ml-1 light">Ingrédients :</h5></div>
+                                <ul class="light">
+                                    <li>Sauce tomate</li>
+                                    <li>Courgettes</li>
+                                    <li>Aubergines</li>
+                                    <li>Oignons</li>
+                                    <li>Tomates</li>
+                                    <li>Emmental</li>
+                                </ul>
+                                <div class="mx-1 my-3 d-flex justify-content-center flex-wrap">
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center mb-2">500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center ml-2">800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary special d-flex align-items-center ml-2"><a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a></span>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="img-round" src="assets/img/products/round_vegetarienne.jpg" alt="Lasagne végétarienne" title="Lasagne végétarienne">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="pr-md-5">
+                                <h4 class="text-uppercase ml-2 regular">Lasagne Saumon épinards           </h4>
+                                <div class="--separator-sm --secondary-separator pl-1 ml-2" style="text-align: left;"></div>
+                                <div class="d-flex mb-1 ml-1"><div class="custom-icon icon-cart-yellow"></div><h5 class="text-uppercase mb-0 ml-1 light">Ingrédients :</h5></div>
+                                <ul class="light">
+                                    <li>Base crème</li>
+                                    <li>Épinards frais</li>
+                                    <li>Saumon</li>
+                                    <li>Emmental</li>
+                                </ul>
+                                <div class="mx-1 my-3 d-flex justify-content-center flex-wrap">
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center mb-2">500<span class="text-gr mr-2 ml-1">gr</span>  9 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary d-flex align-items-center justify-content-center ml-2">800<span class="text-gr mr-2 ml-1">gr</span>  14 <div class="custom-icon icon-euro"></div> </span>
+                                    <span class="custom-chips-secondary special d-flex align-items-center ml-2"><a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a></span>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="img-round" src="assets/img/products/round_saumon.jpg" alt="Lasagne saumon épinards" title="Lasagne saumon épinards" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controllers d-none d-lg-flex">
+                <a class="mr-2 prevent-defaut" href="#ldm-slider" role="button" data-slide="prev">
+                    <div class="custom-icon icon-arrow-left"></div>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="prevent-defaut" href="#ldm-slider" role="button" data-slide="next">
+                    <div class="custom-icon icon-arrow-right"></div>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="carousel-controllers-mobile d-block d-lg-none">
+                <a class="carousel-control-prev prevent-defaut carousel-control" href="#ldm-slider" role="button" data-slide="prev">
+                        <div class="custom-icon icon-arrow-left"></div>
+                        <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next prevent-defaut carousel-control" href="#ldm-slider" role="button" data-slide="next">
+                    <div class="custom-icon icon-arrow-right"></div>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Lasagne Du Moment End -->
+    <!-- History -->
+    <span class="anchor" id="a-history"></span>
+    <div id="history" class="container mt-2">
+        <div class="flex-text-container section-title">
+            <h2 class="text-uppercase  regular">Notre histoire</h2>
+            <div class="--separator-lg --secondary-separator"></div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-4 col-lg-3">
+                <div id="history-img" class="text-center mb-4">
+                    <img class="w-md-100 w-sm-75 h-100" src="assets/img/logo_history.png" alt="mamie lasagnes" title="mamie lasagnes">
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div id="history-text" class="d-flex flex-column justify-content-around">
+                    <h5 class="medium">Bienvenue chez Mamie Lasagnes, des lasagnes maison livrées et adaptées à vos goûts !</h5>
+                    <p class="text-muted regular">Nous avons décidé de nous lancer dans cette aventure familiale car chez nous il est de
+                        tradition de se réunir autour d'un plat de lasagne cuisiné par mamie Paule.</p>
+                    <p class="text-muted regular">Nous apprécions ses différentes lasagnes cuisinées selon les saisons et les goûts de
+                        chacun ! Au cours de ses déjeuners du dimanche, petit à petit la tablée s'est agrandit réunissant amis,
+                        cousins, et voisins...</p>
+                    <p class="text-muted regular">Les lasagnes de mamie sont devenues Mamie Lasagnes car il nous semblait égoïste de
+                        garder nos recettes uniquement pour la famille !</p>
+                    <p class="regular">N'hésite pas à nous contacter afin que la famille s'agrandisse !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- History End -->
+    <!-- Evènement -->
+    <span class="anchor" id="a-evenement"></span>
+    <div id="evenement" class="mt-5 mb-5">
+        <div class="bg-event t-card p-2">
+            <div class="t-container text-center">
+                <h2 class="text-uppercase mt-2 regular">Commandez</h2>
+                <div class="--separator-md --secondary-separator"></div>
+                <ul class="t-card-products-list light">
+                    <li>Anniversaire</li>
+                    <li>Baptême</li>
+                    <li>Repas de famille</li>
+                    <li>Repas d'entreprise</li>
+                </ul>
+                <p class="event-txt">Nous sommes à votre disposition jusqu’à 48h avant votre événement afin d’assurer la fabrication.
+                <br>Toutes nos lasagnes sont proposées en plat familiaux de 6 à 8 personnes ou en barquettes simples et doubles.</p>
+                <span class="custom-chips-secondary  text-uppercase mt-3 mb-3"><a data-toggle="modal" data-target="#contact-modal">Nous contacter</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- Evènement End -->
+    <!-- Etapes de fabrication -->
+    <span class="anchor" id="a-edf"></span>
+    <div id="edf" class="container">
+        <div class="flex-text-container section-title">
+            <h2 class="text-uppercase regular">Les différentes étapes de fabrication</h2>
+            <div class="--separator-md --secondary-separator"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-6 mt-5">
+                <div id="img-fabrication-1" class="t-card mt-2 p-2 h-100">
+                    <div>
+                        <span class="t-card-badge">1</span>
+                    </div>
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Mamie fait son marché</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="regular">Tous les matins, mamie se rend chez ses producteurs et commerçants préférés afin de remplir
+                            son panier des différents ingrédients qui vont servir de base à toutes ses recettes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mt-5">
+                <div id="img-fabrication-2" class="t-card mt-2 p-2 h-100">
+                    <div>
+                        <span class="t-card-badge">2
+                        </span>
+                    </div>
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Mamie cuisine</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="regular">Mamie fabrique la pâte, les sauces et les ingrédients suivant une recette qu'elle garde
+                            secrète.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mt-5">
+                <div id="img-fabrication-3" class="t-card mt-2 p-2 h-100">
+                    <div>
+                        <span class="t-card-badge">3</span>
+                    </div>
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Mamie prépare la barquette</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="regular">2 formats de barquette :</p>
+                        <ul class="t-card-products-list regular">
+                            <li>La simple (500gr)</li>
+                            <li>La double (800gr)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mt-5">
+                <div id="img-fabrication-4" class="t-card mt-2 p-2 h-100">
+                    <div>
+                        <span class="t-card-badge">4</span>
+                    </div>
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Mamie met au four</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="regular">20 minutes de cuisson et une délicieuse lasagne prête à être livrée.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mt-5">
+                <div id="img-fabrication-5" class="t-card mt-2 p-2 h-100">
+                    <div>
+                        <span class="t-card-badge">5</span>
+                    </div>
+                    <div class="t-container text-center">
+                        <h4 class="text-uppercase t-card-title regular">Mamie passe le relais à son petit-fils</h4>
+                        <div class="--separator-sm --secondary-separator"></div>
+                        <p class="regular">La livraison est effectuée sur les différentes communes autour de Saint-Gély-Du-Fesc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Etapes de fabrication End -->
+    <!-- Commentaries Slide -->
+    <div id="commentary-slide" class="w-100 mt-5">
+        <div class="flex-text-container section-title">
+            <h2 class="text-uppercase regular">Quelques avis</h2>
+            <div class="--separator-md --secondary-separator"></div>
+        </div>
+        <div id="carouselContent" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner light" role="listbox">
+                <div class="carousel-item active text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Lasagnes au top, goûts autheniques, un régal livré encore chaud à la maison &#128525; &#128077;</p>
+                        <footer class="blockquote-footer">Gaby sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Lasagnes chaudes, copieuses, fondantes et surtout délicieuses! <br/>
+                        Nous recommandons vivement! &#128521;</p>
+                        
+                        <footer class="blockquote-footer">Jessica sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">N'hésitez plus à tester, vous ne serez pas déçu !! Livraison à l'heure et bien chaud ...<br/>
+                        Une bonne adresse à découvrir !!! &#128077; &#128077; &#128077;
+                        </p>
+                        <footer class="blockquote-footer">Eric sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Lasagne excellente, rien à dire !! Tout le monde s'est régalé !! &#128522; &#128525; &#129316;</p>
+                        
+                        <footer class="blockquote-footer">Mathilde sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Super recettes, vraiment très bonnes je recommande !!</p>
+                        
+                        <footer class="blockquote-footer">Audrey sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Lasagnes délicieuses, elles sont arrivées encore bien chaudes un régal &#128540;</p>
+                        
+                        <footer class="blockquote-footer">Marwane sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+                <div class="carousel-item text-center p-4">
+                    <blockquote class="blockquote mx-auto">
+                        <p class="mb-0">Un DÉ-LICE !!! À essayer de toute urgence</p>
+                        
+                        <footer class="blockquote-footer">Pierre sur <cite title="Source Title"><a href="https://www.facebook.com/mamielasagnes/" target="_blank">Facebook</a></cite></footer>
+                      </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Commentaries Slide -->
+    <!-- Offres -->
+    <span class="anchor" id="a-offres"></span>
+    <div id="offres" class="mt-2 mb-2">
+        <div class="img-container d-flex align-items-center justify-content-center">
+            <div class="img-filter"></div>
+            <div class="text-container text-center">
+                <div class="intro-text d-none d-md-block">
+                    <h1 class="text-uppercase semi-bold">10 Lasagnes achetées <span style="white-space: nowrap;" class="light">=</span> une offerte</h1>
+                </div>
+                <div class="intro-text d-block d-md-none">
+                    <h4 class="text-uppercase semi-bold">10 Lasagnes achetées<br><span style="white-space: nowrap;" class="light">=</span><br>une offerte</h4>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-wave-effet" class="wave-effect w-100" style="transform: rotateX(180deg)"></div>
+    </div>
+    <!-- Offre End -->
+    <!-- Footer -->
+    <span class="anchor" id="a-footer"></span>
+    <div id="footer">
+        <div class="row pb-2 justify-content-center" style="width: 100%; margin-right: 0px; margin-left: 0px;">
+            <div class="col-lg-2 text-center">
+                <a href="#a-image-intro" class="smooth-scrolling"><img src="assets/img/logo_150x150.png" alt="Mamie Lasagne" width="90" height="90"></a>
+            </div>
+            <div class="col-lg-4 text-center mt-lg-0 mt-3">
+                <h4 class="text-uppercase medium">Mamie Lasagnes</h4>
+                <div class="--separator-sm --secondary-separator "></div>
+                <div class="d-flex flex-column mx-auto" style="max-width: 400px">
+                    <div class="d-flex"><div class="custom-icon icon-position-yellow"></div><p class="text-uppercase"><a href="https://g.page/mamie-lasagnes?gm" target="_blank">5 allée du val des oliviers, 34980 COMBAILLAUX</a></p></div>
+                    <div class="d-flex"><div class="custom-icon icon-clock-yellow"></div> <p class="text-uppercase font-12">Livraison vendredi, samedi & dimanche de 18h à 22h</p></div>
+                    <div class="d-flex"><div class="custom-icon icon-mail-yellow"></div><p class="text-uppercase"><a href="mailto:contact@mamielasagnes.fr">CONTACT@MAMIELASAGNES.FR</a></p></div>
+                    <div class="d-flex"><div class="custom-icon icon-phone-yellow"></div><p class="text-uppercase"><a href="tel:+33646309313">+33 (0) 6 46 30 93 13</a></p></div>
+                </div>
+            </div>
+            <div class="--vertical-secondary-separator d-none d-lg-block"></div>
+            <div class="col-lg-3 align-items-center mt-lg-0 mt-3">
+                <div class="text-center">
+                    <h4 class="text-uppercase regular">Navigation</h4>
+                    <div class="--separator-sm --secondary-separator"></div>
+                </div>
+                <ul id="nav-menu">
+                    <li class="text-uppercase"><a href="#a-image-intro" class="smooth-scrolling">Accueil</a></li>
+                    <li class="text-uppercase"><a href="#a-formules" class="smooth-scrolling">Les formules</a></li>
+                    <li class="text-uppercase"><a href="#a-evenement" class="smooth-scrolling">Commandez</a></li>
+                    <li><br></li>
+                    <li class="text-uppercase"><a href="#a-la-carte" class="smooth-scrolling">La carte</a></li>
+                    <li class="text-uppercase"><a href="#a-ldm" class="smooth-scrolling">Lasagnes du moment</a></li>
+                    <li class="text-uppercase"><a href="#a-edf" class="smooth-scrolling">Fabrication</a></li>
+                </ul>
+            </div>
+            <div class="--vertical-secondary-separator d-none d-lg-block"></div>
+            <div class="col-lg-2 text-center mt-lg-3 mt-1">
+                <br>
+                <div class="--separator-sm --secondary-separator"></div>
+                <p><a class="text-uppercase" href="legals.html">Information</a></p>
+                <p><a class="text-uppercase" data-toggle="modal" data-target="#contact-modal" style="cursor: pointer">Nous contacter</a></p>
+                <div id="social-nav">
+                    <a href="tel:+33646309313"><div class="custom-icon icon-phone"></div></a>
+                    <a href="https://www.facebook.com/mamielasagnes/" target="_blank"><div class="custom-icon icon-fb"></div></a>
+                    <a href="https://www.instagram.com/mamie_lasagnes/" target="_blank"><div class="custom-icon icon-instagram"></div></a>
+                    <a href="https://www.tripadvisor.fr" target="_blank" class="mr-1"><div class="custom-icon icon-tripadvisor"></div></a>
+                </div>
+            </div>
+        </div>
+        <div id="end-footer" class="mt-3">
+            <p class="text-uppercase text-center text-white p-2">© 2020 Mamie Lasagnes | Tous droits réservés | <a href="legals.html">Mentions
+                    légales</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Cookies Message -->
+
+    <!-- Cookies Message End -->
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-nav" class="menu d-inline-flex d-md-none">
+        <nav class="menu__nav">
+            <ul class="r-list menu__list text-center">
+                <li class="menu__group">
+                    <a href="#image-intro" class="menu__link smooth-scrolling">
+                        <img src="assets/img/logo_150x150.png" alt="Mamie Lasagne" width="90"
+                            height="90">
+                    </a>
+                </li>
+                <div class="menu__group__container">
+                    <li class="menu__group">
+                        <a href="#la-carte" class="r-link menu__link text-uppercase smooth-scrolling">La carte</a>
+                    </li>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <li class="menu__group">
+                        <a href="#ldm" class="r-link menu__link text-uppercase smooth-scrolling">Les lasagnes du moment</a>
+                    </li>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <li class="menu__group">
+                        <a href="#evenement" class="r-link menu__link text-uppercase smooth-scrolling">Commandez</a>
+                    </li>
+                    <div class="--separator-sm --secondary-separator"></div>
+                    <li class="menu__group">
+                        <a href="#footer" class="r-link menu__link text-uppercase smooth-scrolling">Contact</a>
+                    </li>
+                </div>
+                <div id="social-nav">
+                    <a href="tel:+33646309313"><div class="custom-icon icon-phone-white"></div></a>
+                    <a href="https://www.facebook.com/mamielasagnes/" target="_blank"><div class="custom-icon icon-fb-white"></div></a>
+                    <a href="https://www.instagram.com/mamie_lasagnes/" target="_blank"><div class="custom-icon icon-instagram-white"></div></a>
+                    <a href="https://www.tripadvisor.fr" target="_blank" class="mr-1"><div class="custom-icon icon-tripadvisor-white"></div></a>
+                </div>
+            </ul>
+        </nav>
+        <div class="menu__toggle">
+            <button class="r-button menu__hamburger">
+                <span class="m-hamburger">
+                    <span class="m-hamburger__label">Open menu</span>
+                </span>
+            </button>
+        </div>  
+    </div>
+    <!-- Mobile Menu End -->
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center flex-column">
+                    <button id="modal-close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title regular text-uppercase" id="contact-modal-label">Commandez</h3>
+                    <div class="--separator-md --secondary-separator"></div>
+                </div>
+                <div class="modal-body">
+                    <form action="contact.php" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="lastname">Nom*</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="nom" name="nom" placeholder="Votre nom" required data-msg="Ce champs est obligatoire">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="firstname">Prénom*</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="prenom" name="prenom" placeholder="Votre prénom" required data-msg="Ce champs est obligatoire">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="lastname">Nom de l'entreprise</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="entreprise" name="entreprise" placeholder="Le nom de votre entreprise">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-6">    
+                                    <label for="email">Email*</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="email" name="email" placeholder="Votre email" required data-msg="Ce champs est obligatoire">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="telephone">Téléphone</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="telephone" name="telephone" placeholder="Votre téléphone">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="sujet">Adresse</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="text" class="form-control light" id="adresse" name="adresse" placeholder="L'adresse de la livraison"></textarea>
+                                </div> 
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="message" required>Date</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="date" name="date" id="date">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="message" required>Heure</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <input type="time" name="heure" id="heure">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="message" required="">Message</label>
+                                    <div class="--separator-sm --secondary-separator"></div>
+                                    <textarea class="form-control light" id="message" name="message" placeholder="Votre message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="">les champs suivis d'une * sont obligatoires</span>
+                        <div class="d-flex flex-column">
+                            <div class="g-recaptcha" data-sitekey="6LeFFskUAAAAAG3snI33MV3Btp_yOWpuhy7Dwf6I" data-callback="unlockForm" data-expired-callback="recaptchaExpired"></div>
+                            <button type="submit" id="form-button" class="btn btn-sm semi-bold text-uppercase d-inline-block mx-2 pr-2 mt-2" disabled style="height: 78px; width: auto;">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Modal End -->
+    <!-- Cookies Message -->
+    <div id="cookie-msg" class="animated row align-items-center justify-content-center pb-3 pb-md-0">
+        <div class="alert custom-alert text-center col-md-8" role="alert">
+                Nous utilisons des cookies pour des fonctionnalités liées aux réseaux sociaux, réaliser des statistiques, 
+                vous proposer un contenu personnalisé et de la publicité, y compris sur des sites tiers. En cliquant sur "J'ACCEPTE", 
+                en continuant votre navigation ou en cliquant sur le site, vous acceptez cette utilisation ainsi que le partage de 
+                vos données avec nos partenaires. Pour en savoir plus sur notre utilisation des cookies, nos partenaires et la manière 
+                de retirer votre consentement veuillez consulter la page "En savoir plus".
+        </div>
+        <div class="mt-1 col-md-2 text-center">
+            <button type="button" id="cookie-btn" class="btn btn-sm font-weight-bold d-inline-block ml-2 pr-2" aria-label="Close">J'ACCEPTE</button>
+            <a class="ml-2" href="cookies.html">En savoir plus</a>
+        </div>
+    </div>
+    <!-- Cookies Message End -->
+    <!-- Back to Top -->
+    <a href="index.html#a-image-intro" class="smooth-scrolling"><div class="backToTop animated d-none d-md-block"></div></a>
+
+    <script src="mobile-menu.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                console.log(this.hash)
+                if (this.hash !== "" && $(this).hasClass('smooth-scrolling')) {
+                    console.log("hello")
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 50) {
+                $(".menu").css("--uiMenuCircleBgColor", "#10434b");
+                $(".m-hamburger").css("--uiHamburgerBgColor", "#FFF");
+            }else{
+                $(".menu").css("--uiMenuCircleBgColor", "#FFF");
+                $(".m-hamburger").css("--uiHamburgerBgColor", "#10434b");
+            }
+
+            if($(window).scrollTop() > 1000){
+                $(".backToTop").css("visibility", "visible");
+                $(".backToTop").removeClass('fadeOut');
+                $(".backToTop").addClass('fadeIn');
+            }else{
+                $(".backToTop").removeClass('fadeIn');
+                $(".backToTop").addClass('fadeOut');
+            }
+        })     
+
+        $('.carousel').carousel({
+            interval: 5000,
+            pause: false,
+            keyboard: false
+        });
+
+        $("#contact-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            }
+        });
+
+        $('.prevent-defaut').click( function(e) {
+            e.preventDefault();
+        });
+
+        $('#cookie-btn').click( function(e) {
+            setCookie("MLCOOKIES", "true", 15);
+            $('#cookie-msg').addClass('slideOutDown');
+
+        })
+
+        let menu_state = 0;
+        $('.menu__toggle').click( function(e) {
+            if(menu_state && $(window).scrollTop() < 50){
+                $(".menu").css("--uiMenuCircleBgColor", "#FFF");
+                $(".m-hamburger").css("--uiHamburgerBgColor", "#10434b");
+                menu_state++;
+            }else{
+                $(".menu").css("--uiMenuCircleBgColor", "#10434b");
+                $(".m-hamburger").css("--uiHamburgerBgColor", "#FFF");
+                menu_state--;
+            }
+        })
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var accepted = getCookie("MLCOOKIES");
+            if (accepted == "") {
+                $('#cookie-msg').addClass('slideInUp');
+                $('#cookie-msg').css("visibility", "visible");
+            }
+        }
+    </script>
+</body>
+
+</html>
